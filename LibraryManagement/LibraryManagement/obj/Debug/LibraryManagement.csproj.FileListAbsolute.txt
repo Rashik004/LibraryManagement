@@ -1,1 +1,9 @@
 C:\Users\cefalo\Desktop\School\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe
+E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb
+E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\bin\Debug\TransactionSystem.dll
+E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\bin\Debug\TransactionSystem.pdb
+E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache
+E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
+E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
