@@ -46,6 +46,8 @@
     <Compile Include="LibraryTransactionManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleManagement\Role.cs" />
+    <Compile Include="RoleManagement\RoleManager.cs" />
     <Compile Include="UsersLibraryAccount.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +58,9 @@
       <Project>{bfae4d22-b1cd-4e4b-824b-52f6c48674d7}</Project>
       <Name>TransactionSystem</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserManagement\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

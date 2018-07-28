@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryManagement
 {
+    using Artifacts;
     using TransactionSystem;
     public class UsersLibraryAccount : ITransactionEntity
     {
@@ -29,10 +30,6 @@ namespace LibraryManagement
             return true;
         }
     }
-
-    public class Book
-    {
-        public  string Title { get; set; }
-    }
+       
 
 }
