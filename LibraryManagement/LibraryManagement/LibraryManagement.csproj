@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Artifacts\ArtifactBase.cs" />
+    <Compile Include="Artifacts\Book.cs" />
     <Compile Include="LibraryTransactionManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
