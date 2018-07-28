@@ -1,24 +1,25 @@
-﻿using System;
+﻿using RentalManagementSystem.Artifacts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryManagement.RoleManagement
+namespace RentalManagementSystem.RoleManagement
 {
-    public class Role
+    public class Role : IRole
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public float PrivScale { get; set; }
+        public double AccessLevel { get; set; }
 
         public int RentLimit { get; set; }
         public int RentDayLimit { get; set; }
         public float ChargeRate { get; set; }
-
-        public virtual bool ValidateOtherCriterias()
+        
+        public virtual string ValidateOtherCriterias(IArtifact item)
         {
-            return true;
+            return Constants.SUCCESS_CODE;
         }
         
     }

@@ -1,16 +1,13 @@
-﻿using RentalManagementSystem.RoleManagement;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryManagement.RoleManagement
+namespace RentalManagementSystem.RoleManagement
 {
     public class RoleManager : IRoleManager
     {
-
-
         List<IRole> _roles;
 
         public RoleManager()
@@ -19,10 +16,7 @@ namespace LibraryManagement.RoleManagement
 
         }
 
-        /// <summary>
-        /// In real scenario roles are loaded from database
-        /// </summary>
-        public void LoadRoles()
+        public void SetupRoles()
         {
             _roles.Add(new Role()
             {
@@ -75,11 +69,6 @@ namespace LibraryManagement.RoleManagement
         public void AddRole(IRole newRole)
         {
             _roles.Add(newRole);
-        }
-
-        public void RemoveRole(IRole role)
-        {
-            _roles.Remove(role);
         }
 
         public IRole GetRole(string name)

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryManagement.Artifacts
+namespace RentalManagementSystem
 {
-    public class Book : ArtifactBase
+    public class Constants
     {
+        public const string SUCCESS_CODE = "SUCCESS";
     }
 }

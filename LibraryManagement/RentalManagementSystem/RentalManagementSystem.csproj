@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8CA08257-5316-4E8D-A417-340B77A4884C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{2EB22B67-7FED-4728-8AA5-5F82D82E9CB2}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LibraryManagement</RootNamespace>
-    <AssemblyName>LibraryManagement</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>RentalManagementSystem</RootNamespace>
+    <AssemblyName>RentalManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,31 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LibraryManager.cs" />
-    <Compile Include="LibraryTransactionManager.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Artifacts\ArtifactBase.cs" />
+    <Compile Include="Artifacts\ArtifactManager.cs" />
+    <Compile Include="Artifacts\Book.cs" />
+    <Compile Include="Artifacts\IArtifact.cs" />
+    <Compile Include="Artifacts\IArtifactManager.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoleManagement\IRoleManager.cs" />
-    <Compile Include="RoleManagement\RoleManager.cs" />
-    <Compile Include="UserManagement\LibraryAccount.cs" />
-    <Compile Include="UserManagement\LibraryUser.cs" />
-    <Compile Include="UserManagement\UserManager.cs" />
-    <Compile Include="UsersLibraryAccount.cs" />
+    <Compile Include="RentalManager.cs" />
+    <Compile Include="RoleManagement\IRole.cs" />
+    <Compile Include="RoleManagement\Role.cs" />
+    <Compile Include="UserManagement\IUser.cs" />
+    <Compile Include="UserManagement\IUserAccount.cs" />
+    <Compile Include="UserManagement\User.cs" />
+    <Compile Include="UserManagement\UserAccount.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RentalManagementSystem\RentalManagementSystem.csproj">
-      <Project>{2EB22B67-7FED-4728-8AA5-5F82D82E9CB2}</Project>
-      <Name>RentalManagementSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TransactionSystem\TransactionSystem.csproj">
-      <Project>{bfae4d22-b1cd-4e4b-824b-52f6c48674d7}</Project>
-      <Name>TransactionSystem</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryManagement.Artifacts
+namespace RentalManagementSystem.Artifacts
 {
-    public abstract class ArtifactBase
+    public abstract class ArtifactBase : IArtifact
     {
         public string Title { get; set; }
         public string Category { get; set; }
         public double AccessLevel { get; set; }
         public double Price { get; set; }
+
+        public virtual bool CheckAdditionalRequirements()
+        {
+            return true;
+        }
     }
 }
