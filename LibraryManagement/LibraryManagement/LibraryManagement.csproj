@@ -47,6 +47,10 @@
     <Compile Include="LibraryTransactionManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RentItemsManagement\Book.cs" />
+    <Compile Include="RentItemsManagement\LibraryItem.cs" />
+    <Compile Include="RentItemsManagement\Magazine.cs" />
+    <Compile Include="RentItemsManagement\RentItemsManager.cs" />
     <Compile Include="RoleManagement\IRoleManager.cs" />
     <Compile Include="RoleManagement\RoleManager.cs" />
     <Compile Include="UserManagement\LibraryAccount.cs" />

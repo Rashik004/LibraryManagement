@@ -22,7 +22,7 @@ namespace LibraryManagement
         /// </param>
         static void Main(string[] args)
         {
-
+            new LibraryManagement.LibraryManager().Start();
         }
     }
 }

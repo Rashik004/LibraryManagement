@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="Artifacts\ArtifactBase.cs" />
     <Compile Include="Artifacts\ArtifactManager.cs" />
-    <Compile Include="Artifacts\Book.cs" />
     <Compile Include="Artifacts\IArtifact.cs" />
     <Compile Include="Artifacts\IArtifactManager.cs" />
     <Compile Include="Constants.cs" />

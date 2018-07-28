@@ -12,10 +12,6 @@ namespace RentalManagementSystem.Artifacts
         public string Category { get; set; }
         public double AccessLevel { get; set; }
         public double Price { get; set; }
-
-        public virtual bool CheckAdditionalRequirements()
-        {
-            return true;
-        }
+        
     }
 }

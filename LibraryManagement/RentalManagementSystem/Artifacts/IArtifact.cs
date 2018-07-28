@@ -12,7 +12,6 @@ namespace RentalManagementSystem.Artifacts
         string Category { get; set; }
         double AccessLevel { get; set; }
         double Price { get; set; }
-
-        bool CheckAdditionalRequirements();
+        
     }
 }

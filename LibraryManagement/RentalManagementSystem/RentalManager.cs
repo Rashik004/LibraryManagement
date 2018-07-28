@@ -11,13 +11,7 @@ namespace RentalManagementSystem
 {
     public class RentalManager
     {
-        IRoleManager _roleManager;
 
-        public RentalManager(IRoleManager roleManager)
-        {
-            _roleManager = roleManager;
-
-        }
 
         public string IsUserAllowedToRent(IUser user, IArtifact item)
         {

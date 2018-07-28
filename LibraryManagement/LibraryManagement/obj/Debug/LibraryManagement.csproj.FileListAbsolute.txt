@@ -7,3 +7,5 @@ E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\bin\
 E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache
 E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
 E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\bin\Debug\RentalManagementSystem.dll
+E:\Work\Cefalo School\LibraryManagement\LibraryManagement\LibraryManagement\bin\Debug\RentalManagementSystem.pdb
