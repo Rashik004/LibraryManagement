@@ -123,7 +123,7 @@ namespace LibraryManagement
                 return;
             }
             var item = items[itemNum - 1];
-            ShowMessage($"Item selected: {item}. Proceed? yes/no: ");
+            ShowMessage($"Item selected: {item}. User will be charged {user.CalculateFeeForItem(item)}. Proceed? yes/no: ");
             var choice = Console.ReadLine();
             if (choice.ToLower() != "yes")
                 return;
@@ -131,13 +131,13 @@ namespace LibraryManagement
             // rent
             var result = _rentalSystem.IsUserAllowedToRent(user, item);
 
-            if (_rentalSystem.IsSuccessfull(result) == false)
+            if (_rentalSystem.IsSuccessfull(result))
             {
-                ShowMessage("Can not complete rent request." + result);
+                _rentalSystem.RentItemToUser(user, item);
             }
             else
             {
-                _rentalSystem.RentItemToUser(user, item);
+                ShowMessage("Can not complete rent request. " + GetErrorMessageForResponseCode(result, user, item));
             }
         }
 
@@ -148,19 +148,37 @@ namespace LibraryManagement
         }
 
 
+        private string GetErrorMessageForResponseCode(string resultCode, LibraryUser user, LibraryItem item)
+        {
+            switch (resultCode)
+            {
+                case Constants.NeedHigherAccess:
+                    return $"{user.Name} is not allowed to rent {item.Title}. User need a higher acount than {user.UserRole.Name}";
+
+                case Constants.RentCountReached:
+                    return $"Cannot rent item {item.Title} to {user.Name}. User has already reached his rent limit of {user.UserRole.RentLimit} items";
+
+                case Constants.NotEnoughBalance:
+                    return $"Cannot rent {item.Title} to user. user need a minimum {user.CalculateFeeForItem(item)} fund in his account. " +
+                    $"Current account balance is {user.Account.Balance}";
+
+
+                default:
+                    return "Unknown error occurred";
+            }
+        }
+
     }
 
     public static class CommonMessages
     {
-        public static readonly string EnterChoice = "Enter your command";
+        public static readonly string EnterChoice = "Type your command";
         public static readonly string Separator = Environment.NewLine + "***********************************************" + Environment.NewLine;
 
         public const string Commands = "Commands: Rent, Exit";
         public const string CommandExit = "exit";
         public const string CommandRent = "rent";
 
-        //public static readonly string = "";
-        //public static readonly string = "";
         public static readonly string RentWelcom = "Welcome to rent option. Select a user first";
         public static readonly string CurrentUsers = "Current users are:";
         public static readonly string SelectUser = "Enter user number: ";

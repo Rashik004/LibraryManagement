@@ -1,4 +1,5 @@
-﻿using RentalManagementSystem.RoleManagement;
+﻿using RentalManagementSystem.Artifacts;
+using RentalManagementSystem.RoleManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,7 @@ namespace RentalManagementSystem.UserManagement
         string Name { get; set; }
         IRole UserRole { get; set; }
         IUserAccount Account { get; set; }
+
+        double CalculateFeeForItem(IArtifact item);
     }
 }

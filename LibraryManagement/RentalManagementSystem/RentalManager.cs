@@ -20,15 +20,13 @@ namespace RentalManagementSystem
         {
 
             if (user.UserRole.AccessLevel < item.AccessLevel)
-                return $"{user.Name} is not allowed to rent {item.Title}. User need a higher acount than {user.UserRole.Name}";
+                return Constants.NeedHigherAccess;
 
             if (user.UserRole.RentLimit <= user.Account.RentedItems.Count)
-                return $"Cannot rent item {item.Title} to {user.Name}. User has already reached his rent limit of {user.UserRole.RentLimit} items";
+                return Constants.RentCountReached;
 
-            if (user.Account.Balance < item.Price * (user.UserRole.ChargeRate / 100))
-                return $"Cannot rent {item.Title} to user. user need a minimum {item.Price * (user.UserRole.ChargeRate / 100)} fund in his account. " + 
-                    $"Current account balance is {user.Account.Balance}";
-
+            if (user.Account.Balance < user.CalculateFeeForItem(item))
+                return Constants.NotEnoughBalance;
             
             return user.UserRole.ValidateOtherCriterias(user, item);
         }
