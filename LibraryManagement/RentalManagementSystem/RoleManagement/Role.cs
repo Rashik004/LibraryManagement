@@ -1,4 +1,5 @@
 ﻿using RentalManagementSystem.Artifacts;
+using RentalManagementSystem.UserManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace RentalManagementSystem.RoleManagement
         public int RentDayLimit { get; set; }
         public float ChargeRate { get; set; }
         
-        public virtual string ValidateOtherCriterias(IArtifact item)
+        public virtual string ValidateOtherCriterias(IUser user, IArtifact item)
         {
             return Constants.SUCCESS_CODE;
         }

@@ -122,7 +122,7 @@ namespace LibraryManagement
                 ShowMessage("Item not found.");
                 return;
             }
-            var item = items[userNum - 1];
+            var item = items[itemNum - 1];
             ShowMessage($"Item selected: {item}. Proceed? yes/no: ");
             var choice = Console.ReadLine();
             if (choice.ToLower() != "yes")

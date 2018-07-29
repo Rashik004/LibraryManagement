@@ -30,7 +30,7 @@ namespace RentalManagementSystem
                     $"Current account balance is {user.Account.Balance}";
 
             
-            return user.UserRole.ValidateOtherCriterias(item);
+            return user.UserRole.ValidateOtherCriterias(user, item);
         }
 
         public void RentItemToUser(IUser user, IArtifact item)

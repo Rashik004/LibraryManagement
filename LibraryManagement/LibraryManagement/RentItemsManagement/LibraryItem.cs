@@ -10,7 +10,7 @@ namespace LibraryManagement.RentItemsManagement
     public class LibraryItem : ArtifactBase
     {
         public DateTime AddedToInventory { get; set; }
-
+        public int MinAgeLimit { get; set; }
 
         public override string ToString()
         {

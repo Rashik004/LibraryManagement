@@ -69,6 +69,8 @@ namespace LibraryManagement.RoleManagement
             //    PrivScale = 20,
             //    Description = ""
             //});
+            var customRoles = new CustomRoles();
+            _roles.AddRange(customRoles.GetCustomRoles());
 
         }
 

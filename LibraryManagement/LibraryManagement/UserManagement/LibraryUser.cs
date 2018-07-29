@@ -9,21 +9,7 @@ namespace LibraryManagement.UserManagement
 {
     public class LibraryUser : User
     {
-
-        //private LibraryAccount _account;
-
-        //public new IUserAccount Account
-        //{
-        //    get
-        //    {
-        //        return (IUserAccount) _account;
-        //    }
-
-        //    set
-        //    {
-        //        base.Account = (IUserAccount) value;
-        //    }
-        //}
+        public int Age { get; set; }
 
         public override string ToString()
         {

@@ -68,6 +68,17 @@ namespace LibraryManagement.RentItemsManagement
                 Publisher = "Technology inc"
             });
 
+            _rentItems.Add(new Magazine()
+            {
+                Title = "Hollywood Gossips",
+                Category = "Entertainment",
+                IssueType = MagazineType.Monthly,
+                AccessLevel = 10,
+                MinAgeLimit = 18,
+                Price = 50,
+                Publisher = "Cinema inc"
+            });
+
             //_rentItems.Add(new Book()
             //{
             //    Title = "",

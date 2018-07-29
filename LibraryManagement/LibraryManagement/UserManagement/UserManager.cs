@@ -56,6 +56,19 @@ namespace LibraryManagement.UserManagement
                     UserName = "Steve"
                 }
             });
+            _users.Add(new LibraryUser()
+            {
+                Name = "Timothy Ron",
+                UserName = "LittleTim",
+                Age = 10,
+                UserRole = _roleManager.GetRole("Children"),
+                Account = new LibraryAccount()
+                {
+                    Balance = 20,
+                    UserName = "LittleTim"
+                }
+            });
+
         }
 
         public List<LibraryUser> GetAllUsers()

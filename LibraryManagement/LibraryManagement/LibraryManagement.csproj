@@ -51,6 +51,7 @@
     <Compile Include="RentItemsManagement\LibraryItem.cs" />
     <Compile Include="RentItemsManagement\Magazine.cs" />
     <Compile Include="RentItemsManagement\RentItemsManager.cs" />
+    <Compile Include="RoleManagement\CustomRoles.cs" />
     <Compile Include="RoleManagement\IRoleManager.cs" />
     <Compile Include="RoleManagement\RoleManager.cs" />
     <Compile Include="UserManagement\LibraryAccount.cs" />

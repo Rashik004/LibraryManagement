@@ -1,4 +1,5 @@
 ﻿using RentalManagementSystem.Artifacts;
+using RentalManagementSystem.UserManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace RentalManagementSystem.RoleManagement
 
         double AccessLevel { get; set; }
 
-        string ValidateOtherCriterias(IArtifact item);
+        string ValidateOtherCriterias(IUser user, IArtifact item);
 
     }
 }
