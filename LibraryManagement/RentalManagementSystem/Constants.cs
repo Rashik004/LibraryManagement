@@ -9,5 +9,11 @@ namespace RentalManagementSystem
     public class Constants
     {
         public const string SUCCESS_CODE = "SUCCESS";
+        //public const string NeedHigherAccess = "NeedHigherAccess";
+        //public const string  = "";
+        //public const string  = "";
+        //public const string  = "";
+        //public const string  = "";
+        //public const string  = "";
     }
 }

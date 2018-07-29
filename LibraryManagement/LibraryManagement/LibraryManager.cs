@@ -42,14 +42,14 @@ namespace LibraryManagement
             ShowMessage("Welcome to Cefalo Library");
             ShowMessage(CommonMessages.Separator);
 
-            RunCommantInterface();
+            RunCommandInterface();
 
             ShowMessage("Goodbye! Cefalo library system will now close.");
             Console.ReadKey();
 
         }
 
-        private void RunCommantInterface()
+        private void RunCommandInterface()
         {
             while (true)
             {
