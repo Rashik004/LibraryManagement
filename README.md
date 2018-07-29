@@ -11,7 +11,15 @@ The generic rental system has the following componants:
 3. Role
 4. Rental artifacts
 
-The user of this rental system (the library system) should build their specific needs on top of this items by implementing
+The basic idea is that Rental Artifacts or items will have different AccessLevel and other properties. A user will have a role that 
+determines his AccessLevel. If the user meets the following criterias than a item will be allowed to rent to that user,
+
+1. User has higher or same access level than the item requires
+2. User has sufficient balance
+3. User has not reached his max rent limit
+etc
+
+The user of this rental system (in this case, the library system) should build their specific needs on top of this items by implementing
 this classes and providing method overrides.
 
 One specific example is, the library system creates a custom role for childrens. 
