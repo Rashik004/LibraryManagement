@@ -58,5 +58,10 @@ namespace LibraryManagement.UserManagement
             });
         }
 
+        public List<LibraryUser> GetAllUsers()
+        {
+            return _users;
+        }
+
     }
 }

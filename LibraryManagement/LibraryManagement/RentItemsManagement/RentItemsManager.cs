@@ -62,6 +62,7 @@ namespace LibraryManagement.RentItemsManagement
             {
                 Title = "Techworld horizon",
                 Category = "Technology",
+                IssueType = MagazineType.Monthly,
                 AccessLevel = 10,
                 Price = 50,
                 Publisher = "Technology inc"
@@ -76,6 +77,11 @@ namespace LibraryManagement.RentItemsManagement
             //    Publisher = "publications"
             //});
 
+        }
+
+        public List<LibraryItem> GetAllItems()
+        {
+            return _rentItems;
         }
     }
 }

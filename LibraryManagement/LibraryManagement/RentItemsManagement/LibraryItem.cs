@@ -10,5 +10,11 @@ namespace LibraryManagement.RentItemsManagement
     public class LibraryItem : ArtifactBase
     {
         public DateTime AddedToInventory { get; set; }
+
+
+        public override string ToString()
+        {
+            return $"{Title} - {Category}. Price: {Price}";
+        }
     }
 }

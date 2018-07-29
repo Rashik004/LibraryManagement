@@ -10,7 +10,13 @@ namespace LibraryManagement.RentItemsManagement
     {
         public string Publisher { get; set; }
         public MagazineType IssueType { get; set; }
+
+        public override string ToString()
+        {
+            return  base.ToString() +  $" {IssueType} Magazine";
+        }
     }
+    
 
     public enum MagazineType
     {

@@ -13,5 +13,7 @@ namespace RentalManagementSystem.UserManagement
         double Balance { get; set; }
 
         List<IArtifact> RentedItems { get; set; }
+        void RentItem(IArtifact item, double fee);
+        void ReturnItem(IArtifact item, double fee);
     }
 }

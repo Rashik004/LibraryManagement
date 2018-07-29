@@ -11,7 +11,10 @@ namespace RentalManagementSystem
 {
     public class RentalManager
     {
-
+        public bool IsSuccessfull(string result)
+        {
+            return result == Constants.SUCCESS_CODE;
+        }
 
         public string IsUserAllowedToRent(IUser user, IArtifact item)
         {
@@ -19,7 +22,7 @@ namespace RentalManagementSystem
             if (user.UserRole.AccessLevel < item.AccessLevel)
                 return $"{user.Name} is not allowed to rent {item.Title}. User need a higher acount than {user.UserRole.Name}";
 
-            if (user.UserRole.RentLimit >= user.Account.RentedItems.Count)
+            if (user.UserRole.RentLimit <= user.Account.RentedItems.Count)
                 return $"Cannot rent item {item.Title} to {user.Name}. User has already reached his rent limit of {user.UserRole.RentLimit} items";
 
             if (user.Account.Balance < item.Price * (user.UserRole.ChargeRate / 100))
@@ -29,5 +32,17 @@ namespace RentalManagementSystem
             
             return user.UserRole.ValidateOtherCriterias(item);
         }
+
+        public void RentItemToUser(IUser user, IArtifact item)
+        {
+            user.Account.RentItem(item, item.Price * (user.UserRole.ChargeRate / 100));
+        }
+
+        public void ReturnItemFromUser(IUser user, IArtifact item)
+        {
+            user.Account.ReturnItem(item, item.Price * (user.UserRole.ChargeRate / 100));
+        }
+
+
     }
 }

@@ -10,19 +10,24 @@ namespace LibraryManagement.UserManagement
     public class LibraryUser : User
     {
 
-        private LibraryAccount _account;
+        //private LibraryAccount _account;
 
-        public override IUserAccount Account
+        //public new IUserAccount Account
+        //{
+        //    get
+        //    {
+        //        return (IUserAccount) _account;
+        //    }
+
+        //    set
+        //    {
+        //        base.Account = (IUserAccount) value;
+        //    }
+        //}
+
+        public override string ToString()
         {
-            get
-            {
-                return _account;
-            }
-
-            set
-            {
-                base.Account = value;
-            }
+            return $"{UserName} ({Name}). Balance: {Account.Balance}";
         }
     }
 }

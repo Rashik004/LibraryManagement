@@ -18,5 +18,36 @@ namespace RentalManagementSystem.UserManagement
         {
             RentedItems = new List<IArtifact>();
         }
+
+        public virtual void RentItem(IArtifact item, double fee)
+        {
+            if (RentedItems.Contains(item) == false)
+            {
+                RentedItems.Add(item);
+                Balance -= fee;
+
+                AdditionalRentSteps();
+            }
+        }
+        public virtual void AdditionalRentSteps()
+        {
+        }
+
+        public virtual void ReturnItem(IArtifact item, double fee)
+        {
+            if (RentedItems.Contains(item))
+            {
+                RentedItems.Remove(item);
+                Balance += fee;
+
+                AdditionalReturnSteps();
+            }
+        }
+
+        public virtual void AdditionalReturnSteps()
+        {
+        }
+
+
     }
 }
